@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi-Way Business Solutions</title>
+    <link rel="stylesheet" href="./CSS/Styles.css" />
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo"><a href="./Index.html"><img src="./Images/MWB_Small.png"
+                        alt="Mi-Way Business Solutions" /></a></div>
+            <nav>
+                <ul class="nav-links">
+                    <!-- <li><a href="#about">About Us</a></li> -->
+                    <!-- <li><a href="#services">Products & Services</a></li> -->
+                    <li><a href="./Index.html">Home</a></li>
+                    <li><a href="./Contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>Page Title</h1>
+                <br>
+                <p>Insert body of page here</p>
+            </section>
+        </main>
+
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+            const body = document.body;
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("open");
+                navLinks.classList.toggle("active");
+                body.classList.toggle("no-scroll");
+            });
+        </script>
+        <footer>
+            <!-- Copyrights Section -->
+            <div class="copyright">&copy;2025 - Mi-Way Business Solutions</div>
+        </footer>
+    </div>
+</body>
+
+</html>
