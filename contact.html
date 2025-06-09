@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./CSS/Styles.css" />
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 </head>
-<!--TODO: Re add CAPTCHA and other fields once working :( -->
+
 <body>
     <div class="content-wrapper">
         <header>
@@ -35,21 +35,37 @@
             <form action="https://formsubmit.co/106c897ac8d453eff47f87e578d74875" method="POST">
                 <label>Name *</label>
                 <input type="text" name="name" required>
-                
-                <label>Company Name</label>
-                <input type="text" name="company" required>
-                
+
                 <label>Email *</label>
                 <input type="email" name="email" required>
-                
-                <label>Mobile</label>
-                <input type="text" name="mobile" required>
+
+                <label>Phone No.</label>
+                <input type="text" name="phone">
+
+                <label>Company Name</label>
+                <input type="text" name="company">
 
                 <div id="editor-container"></div>
+                <!--<small id="char-count">0 / 2000 characters</small>-->
+
+                <input type="file" name="attachment" accept="image/png, image/jpeg">
+
                 <input type="hidden" name="message" id="hidden-message" />
 
+                <input type="hidden" name="_subject" value="New message from contact form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
                 <input type="hidden" name="_next" value="https://mi-waybusinesssolutions.co.uk/thank-you.html">
-                <button type="submit">Send</button>
+
+                <!-- reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6LejElMrAAAAAIrI_kldUa0Wh5V9OBP6Av7qE-mh"
+                    data-callback="enableSubmit"></div>
+                <p id="captcha-warning" style="color: red; display: none;">Please complete the CAPTCHA.</p>
+
+                <!-- Submit Button -->
+                <div id="submit-wrapper" style="display: none; margin-top: 1em;">
+                    <button type="submit">Send</button>
+                </div>
             </form>
 
         </main>
@@ -61,6 +77,9 @@
             });
 
             const form = document.querySelector('form');
+            const hiddenMessage = document.getElementById('hidden-message');
+            const submitWrapper = document.getElementById('submit-wrapper');
+            const captchaWarning = document.getElementById('captcha-warning');
 
             form.addEventListener('submit', function (e) {
                 const html = quill.root.innerHTML.trim();
@@ -69,8 +88,17 @@
                     e.preventDefault();  // Stop form submitting if empty
                     return;
                 }
-                document.getElementById('hidden-message').value = html;
+                hiddenMessage.value = html;
+                if (submitWrapper.style.display === 'none') {
+                    e.preventDefault();
+                    captchaWarning.style.display = 'block';
+                }
             });
+
+            function enableSubmit() {
+                submitWrapper.style.display = 'block';
+                captchaWarning.style.display = 'none';
+            }
         </script>
 
         <!-- ReCATPCHA -->
