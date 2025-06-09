@@ -33,64 +33,39 @@
 
         <main>
             <h1>Contact Us</h1>
-            <form action="https://formsubmit.co/el/fovasu" method="POST" onsubmit="return handleSubmit()"
-                enctype="multipart/form-data">
-                <!-- Required Fields -->
-                <label for="name">Name *</label>
-                <input type="text" name="name" id="name" required>
-
-                <label for="email">Email *</label>
-                <input type="email" name="email" id="email" required>
-
-                <!-- Optional Fields -->
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone">
-
-                <label for="company">Company Name</label>
-                <input type="text" name="company" id="company">
-
-                <!-- WYSIWYG Editor -->
-                <label for="message">Message *</label>
+            <form action="https://formsubmit.co/el/fovasu" method="POST" onsubmit="return handleSubmit()">
+                <label>Name *</label>
+                <input type="text" name="name" required>
+            
+                <label>Email *</label>
+                <input type="email" name="email" required>
+            
                 <div id="editor-container"></div>
                 <input type="hidden" name="message" id="hidden-message" />
-
-                <div class="g-recaptcha" data-sitekey="6LejElMrAAAAAIrI_kldUa0Wh5V9OBP6Av7qE-mh"></div>
-                <br />
-
-                <!-- Success Message -->
-                <p id="form-status">Message sent successfully!</p>
-
+            
                 <input type="hidden" name="_next" value="https://mi-waybusinesssolutions.co.uk/thank-you.html">
-
-                <button type="submit">Send Message</button>
+                <button type="submit">Send</button>
             </form>
+            
         </main>
 
         <!-- Form QuillJS -->
-        <script>
-            const quill = new Quill('#editor-container', {
-                theme: 'snow',
-                placeholder: 'Write your message here. You can paste screenshots/images directly.',
-                modules: {
-                    toolbar: [['bold', 'italic', 'underline'], ['link', 'image']]
+        
+           <script>
+                const quill = new Quill('#editor-container', {
+                    theme: 'snow'
+                });
+            
+                function handleSubmit() {
+                    const html = quill.root.innerHTML.trim();
+                    if (html === '<p><br></p>' || html === '') {
+                        alert("Please enter a message.");
+                        return false;
+                    }
+                    document.getElementById('hidden-message').value = html;
+                    return true;
                 }
-            });
-
-            function handleSubmit() {
-                const html = quill.root.innerHTML.trim();
-                if (html === '<p><br></p>' || html === '') {
-                    alert("Please enter a message.");
-                    return false;
-                }
-
-                document.getElementById('hidden-message').value = html;
-
-                // Show confirmation message (Formsubmit will redirect after this)
-                document.getElementById('form-status').style.display = "block";
-
-                return true;
-            }
-        </script>
+            </script>
 
         <!-- ReCATPCHA -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
