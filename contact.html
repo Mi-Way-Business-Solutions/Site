@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./CSS/Styles.css" />
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 </head>
-
+<!--TODO: Re add CAPTCHA and other fields once working :( -->
 <body>
     <div class="content-wrapper">
         <header>
@@ -32,12 +32,15 @@
 
         <main>
             <h1>Contact Us</h1>
-            <form action="https://formsubmit.co/el/fovasu" method="POST">
+            <form action="https://formsubmit.co/52fc7ffbc30f421881e3f98df4bfb4de@domainsbyproxy.com" method="POST">
                 <label>Name *</label>
                 <input type="text" name="name" required>
 
                 <label>Email *</label>
                 <input type="email" name="email" required>
+
+                <label>Company Name</label>
+                <input type="text" name="company" required>
 
                 <div id="editor-container"></div>
                 <input type="hidden" name="message" id="hidden-message" />
