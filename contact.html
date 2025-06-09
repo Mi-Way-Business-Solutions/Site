@@ -13,14 +13,14 @@
 <body>
     <div class="content-wrapper">
         <header>
-            <div class="logo"><a href="./Index.html"><img src="./Images/MWB_Small.png"
+            <div class="logo"><a href="https://mi-waybusinesssolutions.co.uk/"><img src="./Images/MWB_Small.png"
                         alt="Mi-Way Business Solutions" /></a></div>
             <nav>
                 <ul class="nav-links">
                     <!-- <li><a href="#about">About Us</a></li> -->
                     <!-- <li><a href="#services">Products & Services</a></li> -->
-                    <li><a href="./Index.html">Home</a></li>
-                    <li><a href="./Contact.html">Contact Us</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -35,37 +35,37 @@
             <form action="https://formsubmit.co/el/fovasu" method="POST">
                 <label>Name *</label>
                 <input type="text" name="name" required>
-            
+
                 <label>Email *</label>
                 <input type="email" name="email" required>
-            
+
                 <div id="editor-container"></div>
                 <input type="hidden" name="message" id="hidden-message" />
-            
+
                 <input type="hidden" name="_next" value="https://mi-waybusinesssolutions.co.uk/thank-you.html">
                 <button type="submit">Send</button>
             </form>
-            
+
         </main>
 
         <!-- Form QuillJS -->
         <script>
             const quill = new Quill('#editor-container', {
-              theme: 'snow'
+                theme: 'snow'
             });
-          
+
             const form = document.querySelector('form');
-          
-            form.addEventListener('submit', function(e) {
-              const html = quill.root.innerHTML.trim();
-              if (html === '<p><br></p>' || html === '') {
-                alert('Please enter a message.');
-                e.preventDefault();  // Stop form submitting if empty
-                return;
-              }
-              document.getElementById('hidden-message').value = html;
+
+            form.addEventListener('submit', function (e) {
+                const html = quill.root.innerHTML.trim();
+                if (html === '<p><br></p>' || html === '') {
+                    alert('Please enter a message.');
+                    e.preventDefault();  // Stop form submitting if empty
+                    return;
+                }
+                document.getElementById('hidden-message').value = html;
             });
-          </script>
+        </script>
 
         <!-- ReCATPCHA -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
