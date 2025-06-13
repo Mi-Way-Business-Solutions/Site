@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi-Way Business Solutions</title>
+    <link rel="stylesheet" href="./CSS/Styles.css" />
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo"><a href="https://mi-waybusinesssolutions.co.uk/"><img src="./Images/MWB_Small.png"
+                        alt="Mi-Way Business Solutions" /></a></div>
+            <nav>
+                <ul class="nav-links">
+                    <!-- <li><a href="#about">About Us</a></li> -->
+                    <!-- <li><a href="#services">Products & Services</a></li> -->
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>Privacy Statement</h1>
+                <br>
+                <p>Date of revision: 12/06/25</p>
+                <br>
+                <div class="document">
+                    <h2>1. Introduction</h2>
+                    <p>At Mi-Way Business Solutions (“we”, “our”, “us”), we are committed to protecting the privacy and
+                        personal data of our clients, partners, and contacts. This Privacy Statement explains how we
+                        collect, use, store, and protect personal data, in compliance with the UK General Data
+                        Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+
+                    <h2>2. Who We Are</h2>
+                    <p>We are a UK-based provider of digital and business solutions, specialising in, but not limited
+                        to, the following services:</p>
+                    <ul>
+                        <li>Microsoft Dynamics 365 Business Central consultancy and development</li>
+                        <li>System integrations, including third-party tools like MobileNAV</li>
+                        <li>Web development and design</li>
+                        <li>Graphic and branding services</li>
+                    </ul>
+
+                    <h2>3. What Information We Collect</h2>
+                    <p>We may collect and process the following types of personal data:</p>
+                    <ul>
+                        <li>Contact Information: name, email address, phone number, business address</li>
+                        <li>Business Information: job title, company name, project requirements</li>
+                        <li>Technical Information: IP address, device type (for service delivery purposes)</li>
+                        <li>Communications: email correspondence or meeting notes</li>
+                        <li>Billing & Contract Data: invoicing and contract details</li>
+                    </ul>
+
+                    <h2>4. How We Collect Information</h2>
+                    <p>We collect personal data directly from you during:</p>
+                    <ul>
+                        <li>Email, phone, or in-person communications</li>
+                        <li>Completion of forms, proposals, or service agreements</li>
+                        <li>Service delivery and support interactions</li>
+                    </ul>
+
+                    <h2>5. Legal Basis for Processing</h2>
+                    <p>We process your personal data under the following lawful bases:</p>
+                    <ul>
+                        <li>Contractual necessity – to provide services or fulfil an agreement</li>
+                        <li>Legitimate interests – to manage our business and maintain client relationships</li>
+                        <li>Consent – where you have explicitly agreed, such as for receiving updates or newsletters
+                        </li>
+                        <li>Legal obligation – to comply with applicable laws and regulations</li>
+                    </ul>
+
+                    <h2>6. How We Use Your Information</h2>
+                    <p>We use your data to:</p>
+                    <ul>
+                        <li>Deliver our services and fulfil contracts</li>
+                        <li>Respond to enquiries and provide support</li>
+                        <li>Manage business relationships</li>
+                        <li>Send service-related updates or occasional news (only with your consent or under legitimate
+                            interest)</li>
+                    </ul>
+
+                    <h2>7. Sharing Your Data</h2>
+                    <p>We do not sell your data. We may share it with trusted third-party service providers, such as:
+                    </p>
+                    <ul>
+                        <li>IT support or cloud hosting providers</li>
+                        <li>Payment processors</li>
+                        <li>CRM and email communication tools</li>
+                    </ul>
+                    <p>These providers act on our instructions and are contractually bound to safeguard your data.</p>
+                    <ul>
+                        <li>If you use third-party integrations (e.g., MobileNAV or other business systems), data
+                            exchange will occur only under your direction and with clear safeguards in place.</li>
+                    </ul>
+
+                    <h2>8. Data Retention</h2>
+                    <p>We retain personal data:</p>
+                    <ul>
+                        <li>For the duration of any active project or service agreement</li>
+                        <li>For up to one year following the conclusion of our work together, unless you request earlier
+                            deletion</li>
+                        <li>After this period, your data will be securely deleted or anonymised unless we are legally
+                            required to retain it longer.</li>
+                    </ul>
+
+                    <h2>9. International Transfers</h2>
+                    <p>If your data is processed outside the UK (e.g., through cloud services), we ensure appropriate
+                        safeguards are in place, including standard contractual clauses or transfers to countries with
+                        adequacy decisions.</p>
+
+                    <h2>10. Your Rights</h2>
+                    <p>Under the UK GDPR, you have the right to:</p>
+                    <ul>
+                        <li>Access the personal data we hold about you</li>
+                        <li>Request correction or deletion</li>
+                        <li>Object to or restrict how we process your data</li>
+                        <li>Withdraw consent (where applicable)</li>
+                    </ul>
+
+                    <h2>11. Contact Us</h2>
+                    <p>For any privacy-related questions or requests, please contact us using the contact form.</p>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+            const body = document.body;
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("open");
+                navLinks.classList.toggle("active");
+                body.classList.toggle("no-scroll");
+            });
+        </script>
+        <footer>
+            <!-- Copyrights Section -->
+            <div class="copyright">&copy;2025 - Mi-Way Business Solutions</div>
+            <div class="agreements">
+                <p><a href="./eula.html">License Agreement</a>    -    <a href="./privacy-statement.html">Privacy Statement</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

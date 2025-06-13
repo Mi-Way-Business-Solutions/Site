@@ -8,17 +8,40 @@
 h1 {
   color: #218185;
   font-size: 1.8rem;
+  font-weight: normal;
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
+h2 {
+  color: #218185;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 1.3rem;
+  text-align: center;
+}
+
+h3 {
+  color: #218185;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 1.0rem;
+  text-align: center;
+}
+
 
 p {
   text-align: center;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Calibri, Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(246, 245, 245);
+  background-image: url("../Images/MWB_Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   color: #333;
   transition: all 0.3s ease;
 }
@@ -130,12 +153,11 @@ nav {
 
 main {
   padding: 2rem;
-  padding: 2rem;
   max-width: 1300px;
-  width: 95%;
+  width: 93%;
   min-height: 90vh;
   margin: auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.956);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   margin-top: 20px;
@@ -205,17 +227,41 @@ button:hover {
   display: none;
 }
 
+/* Document Formatting */
+.document {
+  text-align: left;
+}
+.document h2 {
+  margin-top: 1rem;
+  text-align: left;
+}
+.document h3 {
+  margin-top: 0.6rem;
+  text-align: left;
+}
+.document p {
+  text-align: left;
+}
+.document li {
+  margin-left: 20px;
+}
+
 /* Footer Styles */
 footer {
   text-align: center;
   margin-top: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #717070;
+  background-color: #4f4e4e;
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: lighter;
-  font-size: 6px;
+  font-size: 7px;
   letter-spacing: 2px;
   border-top-width: 2px;
+}
+
+footer a {
+  color: #FFFFFF;
+  font-style: normal;
 }
