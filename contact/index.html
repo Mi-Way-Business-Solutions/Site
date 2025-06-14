@@ -52,7 +52,7 @@
 
                 <!--<input type="file" name="file[]" multiple accept="image/png, image/jpeg">-->
 
-                <input type="hidden" name="message" id="hidden-message" />
+                <input type="hidden" name="_html" id="hidden-message" />
 
                 <input type="hidden" name="_subject" value="New message from contact form">
                 <input type="hidden" name="_captcha" value="false">
@@ -91,7 +91,9 @@
                     e.preventDefault();  // Stop form submitting if empty
                     return;
                 }
-                hiddenMessage.value = html;
+                const text = quill.getText().trim();
+                hiddenMessage.value = text;
+                
                 if (submitWrapper.style.display === 'none') {
                     e.preventDefault();
                     captchaWarning.style.display = 'block';
