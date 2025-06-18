@@ -257,6 +257,13 @@ button:hover {
   text-align: center;
   margin-bottom: 0.3rem;
 }
+.about-body a {
+  color: #000000;
+  font-style: normal;
+}
+.nav-links li a:hover {
+  color: #218185;
+}
 
 /* Footer Styles */
 footer {
