@@ -246,6 +246,18 @@ button:hover {
   margin-left: 20px;
 }
 
+/* about-body Formatting */
+.about-body h2 {
+  margin-top: 1rem;
+}
+.about-body h3 {
+  margin-top: 0.6rem;
+}
+.about-body li {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
 /* Footer Styles */
 footer {
   text-align: center;
