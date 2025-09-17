@@ -265,7 +265,7 @@ button:hover {
   color: #218185;
 }
 .about-body button {
-  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* Footer Styles */
