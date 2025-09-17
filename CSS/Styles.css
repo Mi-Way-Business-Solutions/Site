@@ -264,6 +264,9 @@ button:hover {
 .nav-links li a:hover {
   color: #218185;
 }
+.about-body button {
+  text-align: center;
+}
 
 /* Footer Styles */
 footer {
