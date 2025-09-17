@@ -36,7 +36,7 @@ p {
 
 body {
   font-family: Calibri, Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgb(246, 245, 245);
+  background-color: rgb(246, 245, 245) !important;
   background-image: url("../Images/MWB_Background.png");
   background-size: cover;
   background-repeat: no-repeat;
